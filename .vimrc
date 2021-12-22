@@ -34,6 +34,18 @@ augroup remember_folds
   autocmd BufWinEnter * silent! loadview
 augroup END
 
+" put swap, backup and undo files in specialized directory
+if !isdirectory("~/.vim/tmp/")
+  call mkdir($HOME . "/.vim/tmp/", "p")
+  call mkdir($HOME . "/.vim/tmp/backup/", "p")
+  call mkdir($HOME . "/.vim/tmp/swap/", "p")
+  call mkdir($HOME . "/.vim/tmp/undo/", "p")
+endif
+set backupdir=~/.vim/tmp/backup//
+set directory=~/.vim/tmp/swap//
+set undodir=~/.vim/tmp/undo//
+
+" ------------ PLUGIN AREA --------------------------------{{
 if !empty(glob("~/.vim/autoload/plug.vim"))
   " because I don't want YouCompleteMe on all machine, it check if the file is
   " empty then decide if it should install ycm and remap keys.
@@ -43,6 +55,7 @@ if !empty(glob("~/.vim/autoload/plug.vim"))
   call plug#begin()
   Plug 'vim-airline/vim-airline'
   Plug 'morhetz/gruvbox'
+  Plug 'tpope/vim-fugitive'
   if installycm
     Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
   endif
