@@ -27,6 +27,12 @@ set foldlevel=99
 " Enable folding with the spacebar
 nnoremap <space> za
 
+" this allows folds and cursor position to persist after file close
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave * mkview
+  autocmd BufWinEnter * silent! loadview
+augroup END
 
 if !empty(glob("~/.vim/autoload/plug.vim"))
   " because I don't want YouCompleteMe on all machine, it check if the file is
