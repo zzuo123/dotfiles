@@ -21,26 +21,45 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" apply gruvbox colorscheme to vim on startup and set background of gruvbox to dark mode
-set bg=dark
-autocmd vimenter * ++nested colorscheme gruvbox
-
 " Enable folding
 set foldmethod=indent
 set foldlevel=99
 " Enable folding with the spacebar
 nnoremap <space> za
 
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
-let g:airline#extensions#tabline#right_sep= ' '
-let g:airline#extensions#tabline#right_alt_sep = '|'
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
-" vim plugins
-call plug#begin()
-Plug 'vim-airline/vim-airline'
-Plug 'morhetz/gruvbox'
-call plug#end()
+if !empty(glob("~/.vim/autoload/plug.vim"))
+  " because I don't want YouCompleteMe on all machine, it check if the file is
+  " empty then decide if it should install ycm and remap keys.
+  let g:installycm = !empty(glob("~/.vim/installycm"))
+
+  " vim plugins
+  call plug#begin()
+  Plug 'vim-airline/vim-airline'
+  Plug 'morhetz/gruvbox'
+  if installycm
+    Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
+  endif
+  call plug#end()
+  
+  if installycm
+    " ycm remap
+    nnoremap <C-y><C-g> :YcmCompleter GoTo
+    nnoremap <C-y><C-d> :YcmCompleter GetDoc
+    nnoremap <C-y><C-n> :YcmCompleter RefactorRename
+    nnoremap <C-y><C-f> :YcmCompleter FixIt
+  endif 
+    
+  " gruvbox colorscheme setting
+  set bg=dark
+  autocmd vimenter * ++nested colorscheme gruvbox
+  
+  " vim airline setting
+  let g:airline_powerline_fonts = 1
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline#extensions#tabline#left_sep = ' '
+  let g:airline#extensions#tabline#left_alt_sep = '|'
+  let g:airline#extensions#tabline#right_sep= ' '
+  let g:airline#extensions#tabline#right_alt_sep = '|'
+  let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+endif  
