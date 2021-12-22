@@ -20,6 +20,13 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+" tab navigations
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+nnoremap <silent> <A-Left> :tabm -1<CR>
+nnoremap <silent> <A-Right> :tabm +1<CR>
+" view the specified file in a new tab (read-only)
+cabbrev tabv tab sview +setlocal\ nomodifiable
 
 " Enable folding
 set foldmethod=indent
