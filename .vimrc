@@ -41,6 +41,11 @@ augroup remember_folds
   autocmd BufWinEnter * silent! loadview
 augroup END
 
+" open a terminal window in current Window
+command Eterm :term ++curwin
+" open a explorer window in current window
+command E :Explore
+
 " put swap, backup and undo files in specialized directory
 if !isdirectory("~/.vim/tmp/")
   call mkdir($HOME . "/.vim/tmp/", "p")
