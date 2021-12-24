@@ -57,6 +57,15 @@ set backupdir=~/.vim/tmp/backup//
 set directory=~/.vim/tmp/swap//
 set undodir=~/.vim/tmp/undo//
 
+" WSL yank support
+let s:clip = '/mnt/c/Windows/System32/clip.exe'  " change this path according to your mount point
+if executable(s:clip)
+    augroup WSLYank
+        autocmd!
+        autocmd TextYankPost * if v:event.operator ==# 'y' | call system(s:clip, @0) | endif
+    augroup END
+endif
+
 " ------------ PLUGIN AREA --------------------------------{{
 if !empty(glob("~/.vim/autoload/plug.vim"))
   " because I don't want YouCompleteMe on all machine, it check if the file is
