@@ -74,9 +74,14 @@ if !empty(glob("~/.vim/autoload/plug.vim"))
 
   " vim plugins
   call plug#begin()
-  Plug 'vim-airline/vim-airline'
-  Plug 'morhetz/gruvbox'
-  Plug 'tpope/vim-fugitive'
+  Plug 'vim-airline/vim-airline'  " cool styling for vim
+  Plug 'morhetz/gruvbox'          " cool color pallet for vim
+  Plug 'tpope/vim-fugitive'       " git integration in vim
+
+  " javascript and jsx (for react) syntax highlighting
+  Plug 'pangloss/vim-javascript'
+  Plug 'maxmellon/vim-jsx-pretty'
+
   if installycm
     Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
   endif
