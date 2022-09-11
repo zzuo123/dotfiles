@@ -1,7 +1,7 @@
 syntax on   "turns on syntax highlighting
 
 set noerrorbells    "no dingdong bell when error
-set tabstop=2 softtabstop=2   "2 spaces on tab-byte and 2 spaces on tab press
+set tabstop=4 softtabstop=4 shiftwidth=4   "4 spaces on tab-byte and 4 spaces on tab press
 set shiftwidth=2    "every >> results in 2 spaces in front of line
 set expandtab   "make tab insert spaces instead of tabs
 set smartindent autoindent  "react to the style of code while applying current line indentation to next line
