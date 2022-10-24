@@ -1,0 +1,9 @@
+acl cpu-checker gstreamer1.0-plugins-good gstreamer1.0-x ibverbs-providers ipxe-qemu ipxe-qemu-256k-compat-efi-roms
+  libaa1 libavc1394-0 libboost-iostreams1.71.0 libboost-thread1.71.0 libbrlapi0.7 libcaca0 libcacard0 libdv4 libfdt1
+  libgbm1 libgstreamer-plugins-good1.0-0 libibverbs1 libiec61883-0 libiscsi7 libjack-jackd2-0 libmp3lame0 libmpg123-0
+  libnl-3-200 libnl-route-3-200 libpmem1 librados2 libraw1394-11 librbd1 librdmacm1 libsamplerate0 libshout3 libslirp0
+  libspeex1 libspice-server1 libtag1v5 libtag1v5-vanilla libtwolame0 libusbredirparser1 libv4l-0 libv4lconvert0
+  libvirglrenderer1 libvirt-daemon libvirt-daemon-driver-qemu libvirt-daemon-driver-storage-rbd libvirt0 libvpx6
+  libvte-2.91-0 libvte-2.91-common libwavpack1 libwayland-server0 libxml2-utils libyajl2 msr-tools ovmf
+  qemu-block-extra qemu-kvm qemu-system-common qemu-system-data qemu-system-gui qemu-system-x86 qemu-utils seabios
+  sharutils

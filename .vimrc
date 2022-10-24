@@ -8,7 +8,7 @@ set smartindent autoindent  "react to the style of code while applying current l
 set number relativenumber   "turns on hybrid line number (nu+rnu)
 set ignorecase smartcase   "case insensitive when searching with all lower case
 set incsearch   "show intermediate search results while typeing
-set nohlsearch  "no text highlight after monving on from search
+set hlsearch    "highlight all instances when searching
 set ruler
 set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
 
@@ -27,6 +27,8 @@ nnoremap <silent> <A-Left> :tabm -1<CR>
 nnoremap <silent> <A-Right> :tabm +1<CR>
 " view the specified file in a new tab (read-only)
 cabbrev tabv tab sview +setlocal\ nomodifiable
+" <Ctrl-l> redraws the screen and removes any search highlighting.
+nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 " Enable folding
 set foldmethod=indent
@@ -77,6 +79,7 @@ if !empty(glob("~/.vim/autoload/plug.vim"))
   Plug 'vim-airline/vim-airline'  " cool styling for vim
   Plug 'morhetz/gruvbox'          " cool color pallet for vim
   Plug 'tpope/vim-fugitive'       " git integration in vim
+  Plug 'wellle/context.vim'       " enable sticky scroll
 
   " javascript and jsx (for react) syntax highlighting
   Plug 'pangloss/vim-javascript'
@@ -93,8 +96,13 @@ if !empty(glob("~/.vim/autoload/plug.vim"))
     nnoremap <C-y><C-d> :YcmCompleter GetDoc
     nnoremap <C-y><C-n> :YcmCompleter RefactorRename
     nnoremap <C-y><C-f> :YcmCompleter FixIt
-  endif 
+    let g:ycm_autoclose_preview_window_after_insertion = 1
+  endif
     
+  " context.vim setting
+  let g:context_filetype_blacklist = ['json']
+  let g:context_enabled = 1
+
   " gruvbox colorscheme setting
   set bg=dark
   autocmd vimenter * ++nested colorscheme gruvbox
