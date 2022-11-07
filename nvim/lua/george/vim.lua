@@ -33,4 +33,3 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 inoremap <expr><Enter> pumvisible() ? "\<C-y>" : "\<Enter>"
 ]])
 
--- require("vimscripts/comment")
