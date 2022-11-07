@@ -9,9 +9,26 @@ return require('packer').startup(function(use)
   use 'tpope/vim-fugitive'      -- git integeration in vim
   use 'pangloss/vim-javascript' -- enable sticky scroll
   use 'wellle/context.vim'      -- sticky context scroll down
+  use 'scrooloose/nerdtree'     -- file system explorer
   -- conquerer of completion (autocomplete)
   use {'neoclide/coc.nvim', branch='release'}
   -- vim airline (base and theme) for status bar
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
+  use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end,
+  }
+  use {
+    "danymat/neogen",
+    config = function()
+        require('neogen').setup {}
+    end,
+    requires = "nvim-treesitter/nvim-treesitter",
+    -- Uncomment next line if you want to follow only stable versions
+    -- tag = "*"
+  }
 end)
