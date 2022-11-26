@@ -15,6 +15,8 @@ return require('packer').startup(function(use)
   -- vim airline (base and theme) for status bar
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
+  -- visual guide for indentation
+  use "lukas-reineke/indent-blankline.nvim"
   use {
         'nvim-treesitter/nvim-treesitter',
         run = function()

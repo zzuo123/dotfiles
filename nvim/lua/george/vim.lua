@@ -28,8 +28,7 @@ command! -nargs=0 Format :CocCommand prettier.forceFormatDocument
 
 -- use intuitive control for pop up menu
 vim.cmd([[
-inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr><Enter> pumvisible() ? "\<C-y>" : "\<Enter>"
 ]])
-

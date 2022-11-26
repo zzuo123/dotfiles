@@ -26,6 +26,11 @@ set.foldlevel = 99
 -- other misceleneous setting
 set.wrap = true     -- I love text wrap
 set.cursorline = true
+-- highlight spaces and tabs
+-- set.listchars="eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣"
+set.listchars="tab:>·"
+set.list = true
+
 
 -- vim airline settings (fallback in case powerline font not exist)
 g("airline_powerline_fonts", 1)
