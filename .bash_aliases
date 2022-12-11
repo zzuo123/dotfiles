@@ -1,2 +1,9 @@
 alias update="sudo apt update && sudo apt upgrade && sudo apt autoclean"
-alias ll="ls -lah"
+alias ll="ls -lah"      # list file vertical, show hidden, human readable
+alias rm="rm -iv"       # interactive+verbose remove
+alias cp="cp -i"        # interactive copy
+alias mv="mv -i"        # interactive move
+alias mkdir="mkdir -p"  # recursive directory making
+alias ps="ps auxf"      # show process: all user, display owner, non-term process, ascii proc hierarchy
+alias cls="clear"       # shorthand to clear screen (command prompt like)
+alias cd..='cd ..'      # cd typo correction
