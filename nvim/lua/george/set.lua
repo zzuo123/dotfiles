@@ -66,4 +66,25 @@ let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = '☰'
 let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.dirty='⚡'
+
+let g:startify_bookmarks = [
+  \ { 'b': '~/.bashrc' },
+  \ { 'v': '~/.config/nvim/init.vim' },
+  \ { 'a': '~/.bash_alias' },
+  \ ]
+let g:startify_custom_header = [
+  \ '              _                                                              ',
+  \ '             | |                                                             ',
+  \ '__      _____| | ___ ___  _ __ ___   ___      __ _  ___  ___  _ __ __ _  ___ ',
+  \ '\ \ /\ / / _ \ |/ __/ _ \| `_ ` _ \ / _ \    / _` |/ _ \/ _ \| `__/ _  |/ _ \',
+  \ ' \ V  V /  __/ | (_| (_) | | | | | |  __/_  | (_| |  __/ (_) | | | (_| |  __/',
+  \ '  \_/\_/ \___|_|\___\___/|_| |_| |_|\___( )  \__, |\___|\___/|_|  \__, |\___|',
+  \ '                                        |/    __/ |                __/ |     ',
+  \ '                                             |___/                |___/',
+  \ ]
+let g:startify_lists = [
+      \ { 'header': ['   Bookmarks'],       'type': 'bookmarks' },
+      \ { 'header': ['   MRU'],            'type': 'files' },
+      \ { 'header': ['   MRU '. getcwd()], 'type': 'dir' },
+      \ ]
 ]])
