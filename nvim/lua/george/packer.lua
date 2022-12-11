@@ -12,6 +12,8 @@ return require('packer').startup(function(use)
   use 'scrooloose/nerdtree'     -- file system explorer
   -- startup screen for nvim
   use { "mhinz/vim-startify" }
+  -- github copilot
+  use { "github/copilot.vim" }
   -- conquerer of completion (autocomplete)
   use {'neoclide/coc.nvim', branch='release'}
   -- vim airline (base and theme) for status bar
