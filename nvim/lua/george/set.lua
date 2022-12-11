@@ -30,6 +30,7 @@ set.cursorline = true
 -- set.listchars="eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣"
 set.listchars="tab:>·"
 set.list = true
+set.mouse = 'a'
 
 
 -- vim airline settings (fallback in case powerline font not exist)

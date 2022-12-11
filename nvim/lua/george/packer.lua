@@ -10,6 +10,8 @@ return require('packer').startup(function(use)
   use 'pangloss/vim-javascript' -- enable sticky scroll
   use 'wellle/context.vim'      -- sticky context scroll down
   use 'scrooloose/nerdtree'     -- file system explorer
+  -- startup screen for nvim
+  use { "mhinz/vim-startify" }
   -- conquerer of completion (autocomplete)
   use {'neoclide/coc.nvim', branch='release'}
   -- vim airline (base and theme) for status bar

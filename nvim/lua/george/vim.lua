@@ -15,9 +15,15 @@ endif
 -- allows folds and cursor position to persist after file closes
 vim.cmd([[
 augroup remember_folds
-  autocmd!
-  autocmd BufWinLeave * mkview
-  autocmd BufWinEnter * silent! loadview
+autocmd!
+autocmd BufWinLeave * 
+  \ if @% != ""
+    \ | mkview
+  \ | endif
+autocmd BufWinEnter * silent!
+\ if @% != ""
+  \ | loadview
+\ | endif
 augroup END
 ]])
 
