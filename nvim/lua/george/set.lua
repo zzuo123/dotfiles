@@ -33,6 +33,33 @@ set.list = true
 set.mouse = 'a'
 
 
+-- nvim-tree settings
+-- disable netrw at the very start of your init.lua (strongly advised)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
+-- empty setup using defaults
+require("nvim-tree").setup()
+-- OR setup with some options
+require("nvim-tree").setup({
+  sort_by = "case_sensitive",
+  view = {
+    adaptive_size = true,
+    mappings = {
+      list = {
+        { key = "u", action = "dir_up" },
+      },
+    },
+  },
+  renderer = {
+    group_empty = true,
+  },
+  filters = {
+    dotfiles = true,
+  },
+})
+
 -- vim airline settings (fallback in case powerline font not exist)
 g("airline_powerline_fonts", 1)
 g("airline#extensions#tabline#enabled", 1)
@@ -67,25 +94,19 @@ let g:airline_symbols.linenr = '☰'
 let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.dirty='⚡'
 
-let g:startify_bookmarks = [
-  \ { 'b': '~/.bashrc' },
-  \ { 'v': '~/.config/nvim/init.vim' },
-  \ { 'a': '~/.bash_alias' },
-  \ ]
-let g:startify_custom_header = startify#center([
-  \ '              _                                                                _ ',
-  \ '             | |                                                              | |',
-  \ '__      _____| | ___ ___  _ __ ___   ___      __ _  ___  ___  _ __ __ _  ___  | |',
-  \ '\ \ /\ / / _ \ |/ __/ _ \| `_ ` _ \ / _ \    / _` |/ _ \/ _ \| `__/ _` |/ _ \ | |',
-  \ ' \ V  V /  __/ | (_| (_) | | | | | |  __/_  | (_| |  __/ (_) | | | (_| |  __/ |_|',
-  \ '  \_/\_/ \___|_|\___\___/|_| |_| |_|\___( )  \__, |\___|\___/|_|  \__, |\___| (_)',
-  \ '                                        |/    __/ |                __/ |         ',
-  \ '                                             |___/                |___/',
+let g:startify_custom_header = startify#pad([
+  \ '__          __  _                               _____                             _ ',
+  \ '\ \        / / | |                             / ____|                           | |',
+  \ ' \ \  /\  / /__| | ___ ___  _ __ ___   ___    | |  __  ___  ___  _ __ __ _  ___  | |',
+  \ '  \ \/  \/ / _ \ |/ __/ _ \| `_ ` _ \ / _ \   | | |_ |/ _ \/ _ \| `__/ _` |/ _ \ | |',
+  \ '   \  /\  /  __/ | (_| (_) | | | | | |  __/_  | |__| |  __/ (_) | | | (_| |  __/ |_|',
+  \ '    \/  \/ \___|_|\___\___/|_| |_| |_|\___( )  \_____|\___|\___/|_|  \__, |\___| (_)',
+  \ '                                          |/                          __/ |         ',
+  \ '                                                                     |___/',
   \ ])
 let g:startify_lists = [
-      \ { 'header': ['   Bookmarks'],       'type': 'bookmarks' },
-      \ { 'header': ['   MRU'],            'type': 'files' },
       \ { 'header': ['   MRU '. getcwd()], 'type': 'dir' },
+      \ { 'header': ['   MRU'],            'type': 'files' },
       \ ]
 let g:startify_files_number = 5
 ]])

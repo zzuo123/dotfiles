@@ -9,7 +9,9 @@ return require('packer').startup(function(use)
   use 'tpope/vim-fugitive'      -- git integeration in vim
   use 'pangloss/vim-javascript' -- enable sticky scroll
   use 'wellle/context.vim'      -- sticky context scroll down
-  use 'scrooloose/nerdtree'     -- file system explorer
+  -- file system explorer (nvim tree instead of nerdtree)
+  use {'kyazdani42/nvim-web-devicons'}
+  use {'nvim-tree/nvim-tree.lua'}
   -- startup screen for nvim
   use { "mhinz/vim-startify" }
   -- github copilot

@@ -16,8 +16,8 @@ map('n', '<A-Right>', ':tabm +1<CR>')
 map('n', '<C-l>', ':nohl<CR><C-l>')
 -- enable folding with the spacebar
 map('n', '<space>', 'za')
--- ctrl-n to toggle nerd tree 
-map('n', '<C-n>', ':NERDTreeToggle<CR>')
+-- ctrl-n to toggle nvim tree 
+map('n', '<C-n>', ':NvimTreeToggle<CR>')
 
 -- Use K to show documentation in preview window.
 function _G.show_docs()
