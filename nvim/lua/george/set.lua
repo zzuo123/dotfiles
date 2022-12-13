@@ -72,7 +72,7 @@ let g:startify_bookmarks = [
   \ { 'v': '~/.config/nvim/init.vim' },
   \ { 'a': '~/.bash_alias' },
   \ ]
-let g:startify_custom_header = [
+let g:startify_custom_header = startify#center([
   \ '              _                                                                _ ',
   \ '             | |                                                              | |',
   \ '__      _____| | ___ ___  _ __ ___   ___      __ _  ___  ___  _ __ __ _  ___  | |',
@@ -81,10 +81,11 @@ let g:startify_custom_header = [
   \ '  \_/\_/ \___|_|\___\___/|_| |_| |_|\___( )  \__, |\___|\___/|_|  \__, |\___| (_)',
   \ '                                        |/    __/ |                __/ |         ',
   \ '                                             |___/                |___/',
-  \ ]
+  \ ])
 let g:startify_lists = [
       \ { 'header': ['   Bookmarks'],       'type': 'bookmarks' },
       \ { 'header': ['   MRU'],            'type': 'files' },
       \ { 'header': ['   MRU '. getcwd()], 'type': 'dir' },
       \ ]
+let g:startify_files_number = 5
 ]])

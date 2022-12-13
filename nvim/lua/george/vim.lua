@@ -14,16 +14,35 @@ endif
 
 -- allows folds and cursor position to persist after file closes
 vim.cmd([[
+function LoadView()
+    try | silent! loadview | catch /^Vim\%((\a\+)\)\=:E484/ | finally | silent! mkview | endtry
+endfunction
+function MakeView()
+    try | silent! mkview | catch /^Vim\%((\a\+)\)\=:E484/ | finally | silent! mkview | endtry
+endfunction
 augroup remember_folds
 autocmd!
-autocmd BufWinLeave * 
-  \ if @% != ""
-    \ | mkview
-  \ | endif
-autocmd BufWinEnter * silent!
-\ if @% != ""
-  \ | loadview
-\ | endif
+autocmd BufWinLeave * call MakeView()
+autocmd BufWinEnter * silent! call LoadView()
+augroup END
+]])
+-- autocmd BufWinLeave * mkview
+-- autocmd BufWinEnter * silent! loadview
+-- autocmd BufWinLeave * 
+--   \ if @% != ""
+--     \ | mkview
+--   \ | endif
+-- autocmd BufWinEnter * silent!
+-- \ if @% != ""
+--   \ | loadview
+-- \ | endif
+
+-- turn off visual guide for indenting when entering vim-startify and turn on when buffer is opened
+vim.cmd([[
+augroup startify
+  autocmd!
+  autocmd User StartifyReady IndentBlanklineDisable
+  autocmd User StartifyBufferOpened IndentBlanklineEnable
 augroup END
 ]])
 
