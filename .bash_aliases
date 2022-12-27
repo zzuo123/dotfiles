@@ -1,4 +1,4 @@
-alias update="sudo apt update && sudo apt upgrade && sudo apt autoclean"
+alias update="sudo apt update && sudo apt upgrade && sudo apt clean && sudo apt autoremove"
 alias ll="ls -lah"      # list file vertical, show hidden, human readable
 alias rm="rm -iv"       # interactive+verbose remove
 alias cp="cp -i"        # interactive copy
