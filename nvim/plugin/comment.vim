@@ -109,6 +109,9 @@ function! CommentLine()
   " for .cpp or .hpp or .java or .C files use //
   if file_name =~ '\.cpp$' || file_name =~ '\.hpp$' || file_name =~ '\.java$' || file_name =~ '\.php[2345]\?$' || file_name =~ '\.C$'
     execute ":silent! normal ^i//\<ESC>==\<down>^"
+  " for .rs or .rlib (rust specific) files use //
+  elseif file_name =~ '\.rs$' || file_name =~ '\.rlib$'
+    execute ":silent! normal ^i//\<ESC>==\<down>^"
   " for .c or .h or .pc or .css files use /* */
   elseif file_name =~ '\.c$' || file_name =~ '\.h$' || file_name =~ '\.pc$' || file_name =~ '\.css$' || file_name =~ '\.js$'
     " if there are previous comments on this line ie /* ... */
@@ -173,6 +176,9 @@ function! UnCommentLine()
 
   " for .cpp or .hpp or .java or .C files use //
   if file_name =~ '\.cpp$' || file_name =~ '\.hpp$' || file_name =~ '\.java$' || file_name =~ '\.php[2345]\?$' || file_name =~ '\.C$'
+    execute ":silent! normal :nohlsearch\<CR>:s/\\/\\///\<CR>:nohlsearch\<CR>=="
+  " for .rs or .rlib (rust specific) files use //
+  elseif file_name =~ '\.rs$' || file_name =~ '\.rlib$'
     execute ":silent! normal :nohlsearch\<CR>:s/\\/\\///\<CR>:nohlsearch\<CR>=="
   " for .ml or .mli
   elseif file_name =~ '\.ml$' || file_name =~ '\.mli$'

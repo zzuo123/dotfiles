@@ -59,6 +59,9 @@ require("nvim-tree").setup({
   },
 })
 
+-- rust tools settings
+vim.g.rustfmt_autosave = 1
+
 -- vim airline settings (fallback in case powerline font not exist)
 g("airline_powerline_fonts", 1)
 g("airline#extensions#tabline#enabled", 1)

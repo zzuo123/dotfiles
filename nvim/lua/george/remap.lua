@@ -18,6 +18,11 @@ map('n', '<C-l>', ':nohl<CR><C-l>')
 map('n', '<space>', 'za')
 -- ctrl-n to toggle nvim tree 
 map('n', '<C-n>', ':NvimTreeToggle<CR>')
+-- coc documentation scroll remap using ctrl-j and ctrl-k one line at a time
+vim.cmd([[
+inoremap <nowait><expr> <C-j> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1, 1)\<cr>" : "\<Right>"
+inoremap <nowait><expr> <C-k> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0, 1)\<cr>" : "\<Left>"
+]])
 
 -- Use K to show documentation in preview window.
 function _G.show_docs()

@@ -8,6 +8,7 @@ return require('packer').startup(function(use)
   use 'morhetz/gruvbox'         -- my favorite color scheme
   use 'tpope/vim-fugitive'      -- git integeration in vim
   use 'pangloss/vim-javascript' -- enable sticky scroll
+  use 'rust-lang/rust.vim'      -- rust syntax highlighting
   use 'wellle/context.vim'      -- sticky context scroll down
   -- file system explorer (nvim tree instead of nerdtree)
   use {'kyazdani42/nvim-web-devicons'}
