@@ -22,6 +22,8 @@ return require('packer').startup(function(use)
   -- vim airline (base and theme) for status bar
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
+  -- vim comment support
+  use { 'numToStr/Comment.nvim' }
   -- visual guide for indentation
   use "lukas-reineke/indent-blankline.nvim"
   use {
@@ -41,3 +43,4 @@ return require('packer').startup(function(use)
     -- tag = "*"
   }
 end)
+
