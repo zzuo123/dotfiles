@@ -31,7 +31,6 @@ set.cursorline = true
 set.listchars="tab:>·"
 set.list = true
 
-
 -- nvim-tree settings
 -- disable netrw at the very start of your init.lua (strongly advised)
 vim.g.loaded_netrw = 1
@@ -111,4 +110,7 @@ let g:startify_lists = [
       \ { 'header': ['   MRU'],            'type': 'files' },
       \ ]
 let g:startify_files_number = 5
+
+" disable automatic comment insertion (use autocmd to overwrite all filetypes)
+au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 ]])
