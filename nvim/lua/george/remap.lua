@@ -18,6 +18,16 @@ map('n', '<C-l>', ':nohl<CR><C-l>')
 map('n', '<space>', 'za')
 -- ctrl-n to toggle nvim tree 
 map('n', '<C-n>', ':NvimTreeToggle<CR>')
+-- sensible remappings for telescope
+map('n', '<Leader>ff', ':Telescope find_files<CR>')
+map('n', '<Leader>fg', ':Telescope live_grep<CR>')
+map('n', '<Leader>fb', ':Telescope buffers<CR>')
+map('n', '<Leader>fh', ':Telescope help_tags<CR>')
+-- telescope git remappings
+map('n', '<Leader>gs', ':Telescope git_status<CR>')
+map('n', '<Leader>gc', ':Telescope git_commits<CR>')
+map('n', '<Leader>gb', ':Telescope git_branches<CR>')
+
 -- coc documentation scroll remap using ctrl-j and ctrl-k one line at a time
 vim.cmd([[
 inoremap <nowait><expr> <C-j> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1, 1)\<cr>" : "\<Right>"

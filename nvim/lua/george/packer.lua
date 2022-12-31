@@ -33,6 +33,12 @@ return require('packer').startup(function(use)
             ts_update()
         end,
   }
+  -- use telescope for fuzzy finding
+  use {
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.0',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
   use {
     "danymat/neogen",
     config = function()
