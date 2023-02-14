@@ -26,6 +26,11 @@ return require('packer').startup(function(use)
   use { 'numToStr/Comment.nvim' }
   -- visual guide for indentation
   use "lukas-reineke/indent-blankline.nvim"
+  -- live server for html, css and javascript
+  use {
+        'turbio/bracey.vim',
+        run = 'npm install --prefix server'
+  }
   use {
         'nvim-treesitter/nvim-treesitter',
         run = function()
