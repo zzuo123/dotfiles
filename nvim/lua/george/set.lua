@@ -21,7 +21,7 @@ set.smartcase = true    -- smart case
 set.incsearch = true    -- show intermediate search result when typing
 set.hlsearch = true     -- highlight all instances
 -- enable folding
-set.foldmethod = "indent"
+set.foldmethod = "syntax"
 set.foldlevel = 99
 -- other misceleneous setting
 set.wrap = true     -- I love text wrap

@@ -2,8 +2,8 @@
 	helper = 
 	helper = !/home/george/miniconda3/bin/gh auth git-credential
 [user]
-	name = zzuo123
-	email = 33331699+zzuo123@users.noreply.github.com
+	name = Zhiyang Zuo
+	email = zzuo@umass.edu
 [credential "https://gist.github.com"]
 	helper = 
 	helper = !/home/george/miniconda3/bin/gh auth git-credential
