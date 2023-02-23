@@ -53,6 +53,10 @@ g("airline_left_sep", "»")
 g("airline_left_sep", "▶")
 g("airline_right_sep", "«")
 g("airline_right_sep", "◀")
+
+-- bracey always use 5500 port always (live server lol)
+g("bracey_server_port", 5500)
+
 -- I am really too lazy to convert this to lua
 vim.cmd([[
 if !exists('g:airline_symbols')
