@@ -1,6 +1,5 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["*"],
-  "prettier.tabWidth": 4,
-  "inlayHint.enable": false,
-  "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.3/clangd_15.0.3/bin/clangd"
+    "prettier.tabWidth": 4,
+    "inlayHint.enable": false,
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.3/clangd_15.0.3/bin/clangd"
 }
