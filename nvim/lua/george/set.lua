@@ -57,6 +57,9 @@ g("airline_right_sep", "◀")
 -- bracey always use 5500 port always (live server lol)
 g("bracey_server_port", 5500)
 
+-- disable github copilot by default
+g("copilot_enabled", 0)
+
 -- I am really too lazy to convert this to lua
 vim.cmd([[
 if !exists('g:airline_symbols')
