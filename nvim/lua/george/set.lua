@@ -21,7 +21,11 @@ set.smartcase = true    -- smart case
 set.incsearch = true    -- show intermediate search result when typing
 set.hlsearch = true     -- highlight all instances
 -- enable folding
-set.foldmethod = "syntax"
+-- set.foldenable = true
+-- set.foldmethod = "indent"
+-- set.foldlevel = 99
+set.foldmethod = "expr"
+set.foldexpr = "nvim_treesitter#foldexpr()"
 set.foldlevel = 99
 -- other misceleneous setting
 set.wrap = true     -- I love text wrap
@@ -58,7 +62,7 @@ g("airline_right_sep", "◀")
 g("bracey_server_port", 5500)
 
 -- disable github copilot by default
-g("copilot_enabled", 0)
+-- g("copilot_enabled", 0)
 
 -- I am really too lazy to convert this to lua
 vim.cmd([[

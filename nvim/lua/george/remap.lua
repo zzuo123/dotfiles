@@ -27,6 +27,8 @@ map('n', '<Leader>fh', ':Telescope help_tags<CR>')
 map('n', '<Leader>gs', ':Telescope git_status<CR>')
 map('n', '<Leader>gc', ':Telescope git_commits<CR>')
 map('n', '<Leader>gb', ':Telescope git_branches<CR>')
+-- esc to leave terminal mode
+map('t', '<Esc>', '<C-\\><C-n>')
 
 -- coc documentation scroll remap using ctrl-j and ctrl-k one line at a time
 vim.cmd([[

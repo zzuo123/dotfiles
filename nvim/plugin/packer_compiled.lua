@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/george/.local/share/nvim/site/pack/packer/start/Comment.nvim",
     url = "https://github.com/numToStr/Comment.nvim"
   },
+  ["bracey.vim"] = {
+    loaded = true,
+    path = "/home/george/.local/share/nvim/site/pack/packer/start/bracey.vim",
+    url = "https://github.com/turbio/bracey.vim"
+  },
   ["coc.nvim"] = {
     loaded = true,
     path = "/home/george/.local/share/nvim/site/pack/packer/start/coc.nvim",

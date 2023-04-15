@@ -57,3 +57,11 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr><Enter> pumvisible() ? "\<C-y>" : "\<Enter>"
 ]])
+
+vim.cmd([[
+" turn off line numbers in terminal mode
+autocmd TermOpen * call SetTermOpen()
+function SetTermOpen()
+    setlocal nonumber norelativenumber
+endfunction
+]])
