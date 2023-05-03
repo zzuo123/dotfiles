@@ -62,14 +62,15 @@ yellow=$(tput setaf 228);
 green=$(tput setaf 71);
 blue=$(tput setaf 45);
 white=$(tput setaf 15);
-bold=$(tput bold);
+# bold=$(tput bold);
 reset=$(tput sgr0);
 #---------------------- end presets -------------------------
 
 if [ "$color_prompt" = yes ]; then
     # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]:\[\033[1;34m\]\W\[\033[00m\]\$ '
     PS1='${debian_chroot:+($debian_chroot)}';
-    PS1+="\[${bold}\]\n"; # newline
+    # PS1+="\[${bold}\]\n"; # newline
+    PS1+="\n"; # newline
     PS1+="\[${blue}\]\@"; # current time (12 hour notation)
     PS1+="\[${white}\] -> ";
     PS1+="\[${orange}\]\u"; # username
