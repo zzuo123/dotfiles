@@ -38,13 +38,13 @@ augroup END
 -- \ | endif
 
 -- turn off visual guide for indenting when entering vim-startify and turn on when buffer is opened
-vim.cmd([[
-augroup startify
-  autocmd!
-  autocmd User StartifyReady IndentBlanklineDisable
-  autocmd User StartifyBufferOpened IndentBlanklineEnable
-augroup END
-]])
+-- vim.cmd([[
+-- augroup startify
+--   autocmd!
+--   autocmd User StartifyReady IndentBlanklineDisable
+--   autocmd User StartifyBufferOpened IndentBlanklineEnable
+-- augroup END
+-- ]])
 
 -- enable prettier by setting Format command
 vim.cmd([[
