@@ -144,4 +144,8 @@ fi
 #. "$HOME/.cargo/env"
 # export PATH="/home/george/miniconda3/bin:$PATH"  # commented out by conda initialize  # commented out by conda initialize
 
-
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
