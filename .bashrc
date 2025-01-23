@@ -149,3 +149,5 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
+# use vim instead of less to open man page
+export MANPAGER='nvim +Man'
