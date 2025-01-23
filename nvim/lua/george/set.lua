@@ -34,7 +34,7 @@ set.cursorline = true
 -- set.listchars="eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣"
 set.listchars="tab:>·"
 set.list = true
-set.mouse = ""
+set.mouse = "a"
 
 -- nvim-tree settings
 -- disable netrw at the very start of your init.lua (strongly advised)
@@ -105,3 +105,7 @@ let g:startify_files_number = 5
 " disable automatic comment insertion (use autocmd to overwrite all filetypes)
 au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 ]])
+
+-- typst vim settings
+g('typst_pdf_viewer', 'evince')
+g('typst_conceal', 1)

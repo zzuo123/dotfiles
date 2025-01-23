@@ -16,7 +16,7 @@ return require('packer').startup(function(use)
   -- startup screen for nvim
   use { "mhinz/vim-startify" }
   -- github copilot
-  use { "github/copilot.vim" }
+  -- use { "github/copilot.vim" }
   -- conquerer of completion (autocomplete)
   use {'neoclide/coc.nvim', branch='release'}
   -- vim airline (base and theme) for status bar
@@ -31,27 +31,32 @@ return require('packer').startup(function(use)
         'turbio/bracey.vim',
         run = 'npm install --prefix server'
   }
-  use {
-        'nvim-treesitter/nvim-treesitter',
-        run = function()
-            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-            ts_update()
-        end,
-  }
   -- use telescope for fuzzy finding
   use {
     'nvim-telescope/telescope.nvim',
     tag = '0.1.0',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+  -- use {
+  --     'kaarmu/typst.vim',
+  --     ft = {'typst'}
+  -- }
   use {
-    "danymat/neogen",
-    config = function()
-        require('neogen').setup {}
-    end,
-    requires = "nvim-treesitter/nvim-treesitter",
-    -- Uncomment next line if you want to follow only stable versions
-    -- tag = "*"
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
   }
+  -- Add Svelte support
+  use {
+      "othree/html5.vim",
+      "evanleck/vim-svelte",
+      branch = 'main',
+  }
+  -- This is a good one if it works, but it just throws way too many errors at this point
+  -- use {
+  --   'chomosuke/typst-preview.nvim',
+  --   tag = 'v0.2.*',
+  --   run = function() require 'typst-preview'.update() end,
+  -- }
 end)
 

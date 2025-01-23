@@ -42,3 +42,6 @@ require('Comment').setup({
     },
 })
 
+-- mason package manager
+require("mason").setup()
+

@@ -1,5 +1,6 @@
 {
     "prettier.tabWidth": 4,
     "inlayHint.enable": false,
-    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.3/clangd_15.0.3/bin/clangd"
+    "clangd.path": "~/.config/coc/extensions/coc-clangd-data/install/15.0.3/clangd_15.0.3/bin/clangd",
+    "svelte.enable-ts-plugin": true
 }
