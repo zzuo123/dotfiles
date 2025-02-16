@@ -7,4 +7,4 @@ alias mkdir="mkdir -p"  # recursive directory making
 alias ps="ps auxf"      # show process: all user, display owner, non-term process, ascii proc hierarchy
 alias cls="clear"       # shorthand to clear screen (command prompt like)
 alias cd..='cd ..'      # cd typo correction
-alias amherst="ping -c2 24.63.75.213" # ping Amherst house to check if router is up
+alias ff="fastfetch"
