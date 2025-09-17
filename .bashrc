@@ -144,3 +144,7 @@ fi
 #. "$HOME/.cargo/env"
 # export PATH="/home/george/miniconda3/bin:$PATH"  # commented out by conda initialize  # commented out by conda initialize
 
+[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
+export CRYPTOGRAPHY_OPENSSL_NO_LEGACY=1
+export PATH="/home/george/.local/bin:$PATH"
+
