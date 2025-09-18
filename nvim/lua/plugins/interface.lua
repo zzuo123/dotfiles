@@ -72,5 +72,24 @@ return {
     vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', { desc = 'Toggle file explorer' })
     vim.keymap.set('n', '<leader>f', ':NvimTreeFindFile<CR>', { desc = 'Find current file in explorer' })
   end,
+}, -- bufferline
+{
+    'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons',
+    config = function()
+        vim.opt.termguicolors = true
+        local bufferline = require('bufferline')
+        bufferline.setup{
+            options = {
+                separator_style = "slope",
+                numbers = "ordinal",
+                diagnostics = "nvim_lsp",
+                -- hover = {
+                --     enabled = true,
+                --     delay = 50,
+                --     reveal = {'close'}
+                -- }
+            }
+        }
+    end,
 }
 }
