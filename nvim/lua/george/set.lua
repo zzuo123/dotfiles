@@ -10,3 +10,6 @@ vim.o.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 vim.o.foldlevel = 99
 -- vim.o.foldlevelstart = 1
 vim.keymap.set('n', '<Space>', 'za', { noremap = true, silent = true, desc = "Toggle fold" })
+
+-- user system clipboard for yank(y), delete(d), change(c), and put(p)
+vim.opt.clipboard = "unnamedplus"
