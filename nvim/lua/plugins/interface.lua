@@ -78,12 +78,27 @@ return {
     config = function()
         vim.opt.termguicolors = true
         local bufferline = require('bufferline')
+        local bg_color = '#3c3836'
         bufferline.setup{
             options = {
-                separator_style = "slope",
+                separator_style = "slant",
                 numbers = "ordinal",
                 diagnostics = "nvim_lsp",
-            }
+            },
+            highlights = {
+              fill = {
+                bg = bg_color,
+              },
+              separator = {
+                fg = bg_color,
+              },
+              separator_selected = {
+                fg = bg_color,
+              },
+              separator_visible = {
+                fg = bg_color,
+              },
+            },
         }
         -- Quick access by number: <leader>1..9 and <leader>0 for last buffer
         for i = 1, 9 do

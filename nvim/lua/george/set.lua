@@ -13,3 +13,6 @@ vim.keymap.set('n', '<Space>', 'za', { noremap = true, silent = true, desc = "To
 
 -- user system clipboard for yank(y), delete(d), change(c), and put(p)
 vim.opt.clipboard = "unnamedplus"
+
+-- use true color (24-bit color) in the terminal instead of the old 256-color palette.
+vim.opt.termguicolors = true
