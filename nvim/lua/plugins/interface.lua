@@ -61,10 +61,10 @@ return {
         width = 30,
       },
       renderer = {
-        group_empty = true,
+        group_empty = true, -- compact folder with only a subfolder into one, e.g. fold/subfold
       },
       filters = {
-        dotfiles = true,
+        dotfiles = false,   -- show dotfiles by default
       },
     })
 
