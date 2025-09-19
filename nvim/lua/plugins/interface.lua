@@ -83,13 +83,23 @@ return {
                 separator_style = "slope",
                 numbers = "ordinal",
                 diagnostics = "nvim_lsp",
-                -- hover = {
-                --     enabled = true,
-                --     delay = 50,
-                --     reveal = {'close'}
-                -- }
             }
         }
+        -- Quick access by number: <leader>1..9 and <leader>0 for last buffer
+        for i = 1, 9 do
+          vim.keymap.set("n", "<leader>" .. i, "<Cmd>BufferLineGoToBuffer " .. i .. "<CR>", {
+            desc = "Go to buffer " .. i,
+          })
+        end
+        vim.keymap.set("n", "<leader>0", "<Cmd>BufferLineGoToBuffer -1<CR>", {
+          desc = "Go to last buffer",
+        })
+        -- Cycle through buffers
+        vim.keymap.set("n", "<S-l>", "<Cmd>BufferLineCycleNext<CR>", { desc = "Next buffer" })
+        vim.keymap.set("n", "<S-h>", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Prev buffer" })
+        -- Pick mode: interactive buffer selection/closing
+        vim.keymap.set("n", "<leader>bp", "<Cmd>BufferLinePick<CR>", { desc = "Pick buffer" })
+        vim.keymap.set("n", "<leader>bc", "<Cmd>BufferLinePickClose<CR>", { desc = "Pick buffer to close" })
     end,
 }
 }
