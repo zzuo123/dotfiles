@@ -15,3 +15,9 @@ vim.opt.clipboard = "unnamedplus"
 
 -- use true color (24-bit color) in the terminal instead of the old 256-color palette.
 vim.opt.termguicolors = true
+
+-- enable spell checking
+vim.o.spell = true
+vim.o.spelllang = "en_us"
+vim.o.spellfile = vim.fn.stdpath('config') .. '/spell/en.utf-8.add'
+
