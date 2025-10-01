@@ -18,4 +18,5 @@ map('n', '<C-l>', ':nohl<CR><C-l>')
 map('n', '<C-n>', ':NvimTreeToggle<CR>')
 -- esc to leave terminal mode
 map('t', '<Esc>', '<C-\\><C-n>')
-
+-- enter key to toggle fold
+vim.keymap.set('n', '<CR>', 'za', { noremap = true, silent = true, desc = "Toggle fold" })

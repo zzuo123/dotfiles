@@ -57,5 +57,6 @@ return {
   },
   -- or use config
   -- config = function(_, opts) require'lsp_signature'.setup({you options}) end
-}
+},
+"github/copilot.vim",   -- github copilot
 }
